@@ -1,4 +1,4 @@
-# The Long Game
+# Compound
 
 A daily notebook on biotech, longevity and AI in medicine — one short brief a
 day, written in plain English for people getting into the space.
