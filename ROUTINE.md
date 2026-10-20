@@ -14,8 +14,12 @@ sourced.
 TZ=America/Mexico_City date +%F
 ```
 
-Call that `DATE`. If `src/content/daily/DATE.md` already exists, or a branch
-`daily/DATE` already exists on the remote, stop — today is done.
+Call that `DATE`. If `src/content/daily/DATE.md` already exists on `main`, or
+an open pull request titled `Daily brief — DATE…` already exists, stop — today
+is done.
+
+The site needs Node 22.12 or newer. If `node --version` is older, install it
+first (for example `nvm install 22`).
 
 ## 2. Scan
 
@@ -82,7 +86,9 @@ The build validates every brief against the schema. It must pass.
 
 ## 7. Open the pull request
 
-Branch `daily/DATE`, one commit `Daily brief DATE`, then open a PR titled
+Create a branch named `daily/DATE` (or, if your environment only lets you
+push to branches with a required prefix, that prefix plus `daily-DATE`). Make
+one commit `Daily brief DATE`, push, and open a PR into `main` titled
 `Daily brief — DATE: <title>` with this body:
 
 ```markdown
@@ -101,4 +107,6 @@ Branch `daily/DATE`, one commit `Daily brief DATE`, then open a PR titled
 - People or newsletters worth adding to the Follow page: …
 ```
 
-Leave "Notes from the scan" lines out if they're empty. Do not merge the PR.
+Leave "Notes from the scan" lines out if they're empty. If the build fails and
+you can't fix it, still open the PR and say so in its first line. Never push
+to `main` and never merge the PR.
