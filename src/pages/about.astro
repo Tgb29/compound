@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../site';
+import { href } from '../lib/paths';
+---
+
+<Base title="How this site works" description={`What ${SITE.name} is, how the daily brief gets made, and what it isn't.`}>
+  <p class="eyebrow">About</p>
+  <h1>How this site works</h1>
+  <div class="prose">
+    <p>
+      {SITE.name} is a notebook I keep to make myself follow biotech every day — deals, public markets, new medicines,
+      papers, longevity, and AI in medicine — and to explain it plainly enough that anyone getting into the space can use
+      it too.
+    </p>
+
+    <h2>The daily routine</h2>
+    <ol>
+      <li>
+        <strong>Early morning:</strong> a research assistant (an AI agent) scans the news, press releases, FDA updates,
+        new papers and the accounts on the <a href={href('/follow/')}>Follow</a> page, and drafts the day's brief with a source
+        for every item.
+      </li>
+      <li>
+        <strong>Then me:</strong> I read the draft, check the sources, cut what's wrong or boring, write my own take, and
+        read one piece in full.
+      </li>
+      <li>
+        <strong>Publish:</strong> the brief goes live here and in the <a href={href('/rss.xml')}>RSS feed</a>. The streak on
+        the home page shows every day I did it — and every day I didn't.
+      </li>
+    </ol>
+
+    <h2>What it isn't</h2>
+    <p>
+      Not medical advice, and not investment advice. I'm learning in public; I'll get things wrong. Every item links to its
+      source — that's the thing to trust, not the summary.
+    </p>
+
+    <h2>Spotted a mistake?</h2>
+    <p>
+      Corrections get made in place, with a note. The site is built from plain text files in a public repository, so every
+      change is on the record.
+    </p>
+  </div>
+</Base>

@@ -1,0 +1,115 @@
+---
+import Base from '../../layouts/Base.astro';
+import { publishedBriefs } from '../../lib/briefs';
+import { formatDay, monthLabel } from '../../lib/dates';
+import { href } from '../../lib/paths';
+import { CATEGORY_META, CATEGORY_ORDER } from '../../lib/categories';
+
+const briefs = await publishedBriefs();
+const months: { label: string; briefs: typeof briefs }[] = [];
+for (const brief of briefs) {
+  const label = monthLabel(brief.id);
+  const last = months.at(-1);
+  if (last?.label === label) last.briefs.push(brief);
+  else months.push({ label, briefs: [brief] });
+}
+---
+
+<Base title="Daily briefs" description="Every daily brief, newest first.">
+  <p class="eyebrow">Daily</p>
+  <h1>Every brief</h1>
+  <p class="lede">
+    One brief a day: what happened in biotech, longevity and AI in medicine, and why it matters. <a
+      href={href('/rss.xml')}>Subscribe by RSS</a
+    >.
+  </p>
+
+  {
+    months.map((month) => (
+      <section class="month">
+        <h2>{month.label}</h2>
+        <ol class="list">
+          {month.briefs.map((brief) => {
+            const cats = CATEGORY_ORDER.filter((c) => brief.data.items.some((i) => i.category === c));
+            return (
+              <li>
+                <a href={href(`/daily/${brief.id}/`)}>
+                  <span class="date">{formatDay(brief.id, 'short')}</span>
+                  <span class="body">
+                    <span class="title">{brief.data.title}</span>
+                    <span class="summary">{brief.data.summary}</span>
+                    <span class="cats">
+                      {cats.map((c) => (
+                        <span class="tag">
+                          <span class:list={['dot', c]} />
+                          {CATEGORY_META[c].label}
+                        </span>
+                      ))}
+                    </span>
+                  </span>
+                </a>
+              </li>
+            );
+          })}
+        </ol>
+      </section>
+    ))
+  }
+  {briefs.length === 0 && <p class="muted">No briefs yet.</p>}
+</Base>
+
+<style>
+  .month {
+    margin-top: 36px;
+  }
+  .month h2 {
+    font-size: 1.1rem;
+    font-family: var(--sans);
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+  }
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .list a {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    color: inherit;
+    text-decoration: none;
+  }
+  .list a:hover .title {
+    color: var(--accent-ink);
+  }
+  .date {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--muted);
+    padding-top: 3px;
+  }
+  .body {
+    display: grid;
+    gap: 4px;
+  }
+  .title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .summary {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    margin-top: 2px;
+  }
+</style>

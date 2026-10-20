@@ -1,0 +1,61 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { formatDate } from '../../lib/dates';
+import { href } from '../../lib/paths';
+
+export async function getStaticPaths() {
+  const primers = (await getCollection('learn')).sort((a, b) => a.data.order - b.data.order);
+  return primers.map((primer, i) => ({
+    params: { id: primer.id },
+    props: { primer, next: primers[i + 1], index: i + 1, count: primers.length },
+  }));
+}
+
+const { primer, next, index, count } = Astro.props;
+const { Content } = await render(primer);
+---
+
+<Base title={primer.data.title} description={primer.data.summary}>
+  <a class="back" href={href('/learn/')}>← All primers</a>
+  <p class="eyebrow">Primer {index} of {count} · {primer.data.minutes} min read</p>
+  <h1>{primer.data.title}</h1>
+  <p class="lede">{primer.data.summary}</p>
+  <article class="prose">
+    <Content />
+  </article>
+  <p class="small muted updated">Last updated {formatDate(primer.data.updated, 'long')}.</p>
+  {
+    next && (
+      <a class="card next" href={href(`/learn/${next.id}/`)}>
+        <span class="eyebrow">Next primer</span>
+        <span class="title">{next.data.title} →</span>
+      </a>
+    )
+  }
+</Base>
+
+<style>
+  .updated {
+    margin-top: 32px;
+  }
+  .next {
+    display: grid;
+    gap: 2px;
+    margin-top: 24px;
+    color: inherit;
+    text-decoration: none;
+  }
+  .next:hover {
+    border-color: var(--accent);
+    color: inherit;
+  }
+  .next .eyebrow {
+    margin: 0;
+  }
+  .title {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+</style>

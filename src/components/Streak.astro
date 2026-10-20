@@ -1,0 +1,207 @@
+---
+import { SITE } from '../site';
+import { formatDay } from '../lib/dates';
+import { heatmap, streakStats } from '../lib/streak';
+import { href } from '../lib/paths';
+
+interface Props {
+  ids: string[];
+  today: string;
+}
+
+const { ids, today } = Astro.props;
+const stats = streakStats(ids, today);
+// 36 weeks fill a desktop card; narrower screens hide the oldest columns (see CSS).
+const weeks = heatmap(ids, today, 36);
+const days = (n: number) => `${n} ${n === 1 ? 'day' : 'days'}`;
+const dayLabels = ['Mon', '', 'Wed', '', 'Fri', '', ''];
+const stateLabel = {
+  done: 'brief published',
+  missed: 'no brief',
+  today: 'today, not published yet',
+  before: '',
+  future: '',
+};
+---
+
+<section class="streak card" aria-labelledby="streak-title">
+  <div class="streak-top">
+    <div>
+      <p class="eyebrow" id="streak-title">The daily habit</p>
+      <p class="streak-count">
+        <span class="num">{stats.current}</span>
+        <span>day streak</span>
+      </p>
+    </div>
+    <dl class="streak-stats">
+      <div><dt>This week</dt><dd>{stats.thisWeek} / {SITE.weeklyTarget}</dd></div>
+      <div><dt>Best run</dt><dd>{days(stats.longest)}</dd></div>
+      <div><dt>Briefs</dt><dd>{stats.total}</dd></div>
+    </dl>
+  </div>
+
+  <div class="heat-wrap">
+    <div class="heat-days" aria-hidden="true">{dayLabels.map((d) => <span>{d}</span>)}</div>
+    <div class="heat" role="img" aria-label={`${stats.total} briefs published; current streak ${stats.current} days`}>
+      {
+        weeks.map((week) => (
+          <div class="heat-col">
+            {week.map((day) =>
+              day.state === 'done' ? (
+                <a
+                  class="cell done"
+                  href={href(`/daily/${day.id}/`)}
+                  title={`${formatDay(day.id, 'short')}: ${stateLabel.done}`}
+                />
+              ) : (
+                <span
+                  class:list={['cell', day.state]}
+                  title={stateLabel[day.state] ? `${formatDay(day.id, 'short')}: ${stateLabel[day.state]}` : undefined}
+                />
+              ),
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <p class="streak-foot small muted">
+    {
+      stats.doneToday ? (
+        <>Today's brief is up.</>
+      ) : (
+        <>Today's brief isn't up yet — the streak holds until midnight.</>
+      )
+    }
+    <span class="legend" aria-hidden="true">
+      <span class="cell done"></span> published <span class="cell missed"></span> missed
+    </span>
+  </p>
+</section>
+
+<style>
+  .streak-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .streak-count {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-family: var(--serif);
+    font-size: 1.2rem;
+  }
+  .streak-count .num {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--accent-ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .streak-stats {
+    display: flex;
+    gap: 24px;
+    margin: 0;
+  }
+  .streak-stats dt {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .streak-stats dd {
+    margin: 0;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .heat-wrap {
+    display: flex;
+    gap: 6px;
+    margin-top: 18px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .heat-days {
+    display: grid;
+    grid-template-rows: repeat(7, 14px);
+    gap: 3px;
+    font-size: 0.65rem;
+    color: var(--faint);
+    line-height: 14px;
+  }
+  .heat {
+    display: flex;
+    gap: 3px;
+  }
+  .heat-col {
+    display: grid;
+    grid-template-rows: repeat(7, 14px);
+    gap: 3px;
+  }
+  .cell {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    background: var(--heat-missed);
+  }
+  .cell.done {
+    background: var(--heat-done);
+  }
+  a.cell.done:hover {
+    outline: 2px solid var(--ink);
+    outline-offset: 1px;
+  }
+  .cell.today {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px var(--accent);
+  }
+  .cell.before,
+  .cell.future {
+    background: transparent;
+    box-shadow: inset 0 0 0 1px var(--line);
+    opacity: 0.5;
+  }
+  .streak-foot {
+    margin: 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .legend {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend .cell {
+    width: 11px;
+    height: 11px;
+  }
+  @media (max-width: 720px) {
+    .heat-col:nth-child(-n + 10) {
+      display: none;
+    }
+  }
+  @media (max-width: 480px) {
+    .heat-col:nth-child(-n + 20) {
+      display: none;
+    }
+    .streak-stats {
+      gap: 16px;
+    }
+    .cell {
+      width: 12px;
+      height: 12px;
+    }
+    .heat-col,
+    .heat-days {
+      grid-template-rows: repeat(7, 12px);
+    }
+  }
+</style>

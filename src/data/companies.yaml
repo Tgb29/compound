@@ -1,0 +1,193 @@
+# Companies on the watchlist.
+# kind: public | private | nonprofit
+# focus: obesity | longevity | ai-discovery | platform | big-pharma
+
+- id: eli-lilly
+  name: Eli Lilly
+  ticker: LLY
+  kind: public
+  focus: big-pharma
+  what: Maker of Zepbound/Mounjaro (tirzepatide) and the Foundayo pill. Leads the obesity-drug market, with retatrutide next.
+  latest: "Oct 2026: the EU medicines committee backed Foundayo for obesity and diabetes. Q3 results due Oct 29."
+  url: https://www.lilly.com
+  source: https://www.pharmexec.com/view/ema-panel-backs-lilly-foundayo-obesity-type-2-diabetes-europe
+
+- id: novo-nordisk
+  name: Novo Nordisk
+  ticker: NVO
+  kind: public
+  focus: big-pharma
+  what: Maker of Ozempic and Wegovy (semaglutide) and the first GLP-1 weight-loss pill. CagriSema and amycretin are next.
+  latest: "Oct 2026: new CagriSema data showed about 25% average weight loss in women; an FDA decision is expected in Q4."
+  url: https://www.novonordisk.com
+  source: https://www.prnewswire.com/news-releases/novos-cagrisema-was-associated-with-25-weight-loss-on-average-for-women-in-a-post-hoc-analysis-of-redefine-1-presented-at-the-menopause-society-annual-meeting-302914051.html
+
+- id: amgen
+  name: Amgen
+  ticker: AMGN
+  kind: public
+  focus: big-pharma
+  what: Large biotech whose obesity bet is MariTide, an injection given monthly or less often.
+  latest: "Aug 2026: dropped early obesity drug AMG 513, leaving MariTide as its only weight-loss program."
+  url: https://www.amgen.com
+  source: https://www.biospace.com/business/amgens-maritide-stands-alone-after-obesity-cull-while-analysts-seek-more-m-a
+
+- id: viking
+  name: Viking Therapeutics
+  ticker: VKTX
+  kind: public
+  focus: obesity
+  what: Small biotech developing one obesity drug, VK2735, as both a weekly shot and a daily pill.
+  latest: "Oct 2026: started Phase 3 trials of its obesity pill."
+  url: https://vikingtherapeutics.com
+  source: https://www.biopharminternational.com/view/viking-starts-phase-3-sunrise-program-for-oral-vk2735-in-obesity
+
+- id: structure
+  name: Structure Therapeutics
+  ticker: GPCR
+  kind: public
+  focus: obesity
+  what: Makes small-molecule obesity pills — aleniglipron (GLP-1) plus an early oral amylin drug.
+  latest: "Sep 2026: Phase 3 program for aleniglipron running since Aug."
+  url: https://structuretx.com
+  source: https://www.sec.gov/Archives/edgar/data/0001888886/000110465926105688/tm2624945d1_ex99-1.htm
+
+- id: recursion
+  name: Recursion
+  ticker: RXRX
+  kind: public
+  focus: ai-discovery
+  what: Uses robots, cell imaging and AI to find and test drug ideas at scale.
+  latest: "Oct 2026: raised about $200M in a stock offering; Sanofi took up the first drug from their immunology partnership."
+  url: https://www.recursion.com
+  source: https://www.sec.gov/Archives/edgar/data/0001601830/000160183026000128/exhibit992-businessupdate.htm
+
+- id: insilico
+  name: Insilico Medicine
+  ticker: 3696.HK
+  kind: public
+  focus: ai-discovery
+  what: Uses generative AI to choose disease targets and design molecules. Listed in Hong Kong since Dec 2025.
+  latest: "Sep 2026: first patient dosed in its Phase 3 trial of rentosertib for lung scarring."
+  url: https://insilico.com
+  source: https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3
+
+- id: generate
+  name: Generate Biomedicines
+  ticker: GENB
+  kind: public
+  focus: ai-discovery
+  what: Designs protein drugs with generative AI. Founded by Flagship Pioneering; went public on Nasdaq in Feb 2026.
+  latest: "Aug 2026: Phase 3 severe-asthma trials of its AI-designed antibody are enrolling."
+  url: https://generatebiomedicines.com
+  source: https://finviz.com/news/378386/generate-biomedicines-inc-reports-second-quarter-2026-financial-results-and-provides-business-update
+
+- id: absci
+  name: Absci
+  ticker: ABSI
+  kind: public
+  focus: ai-discovery
+  what: Designs antibodies with generative AI. Lead drug ABS-201 targets hair loss and endometriosis.
+  latest: "Aug 2026: raised $100M, including $40M from Eli Lilly."
+  url: https://www.absci.com
+  source: https://www.sec.gov/Archives/edgar/data/0001672688/000167268826000134/exhibit991-2026q210xqpr.htm
+
+- id: isomorphic
+  name: Isomorphic Labs
+  kind: private
+  focus: ai-discovery
+  what: Spun out of Google DeepMind; uses AlphaFold-style AI to design drugs, with partnerships with Lilly, Novartis and J&J.
+  latest: "Oct 2026: reportedly in early talks to raise at a $40–50B valuation, after a $2.1B round in May. No drug in human trials yet."
+  url: https://www.isomorphiclabs.com
+  source: https://siliconangle.com/2026/10/08/alphabet-spinoff-isomorphic-labs-reportedly-raising-funding-at-up-to-50b-valuation/
+
+- id: xaira
+  name: Xaira Therapeutics
+  kind: private
+  focus: ai-discovery
+  what: AI drug-design startup launched in 2024 with over $1B, led by Marc Tessier-Lavigne.
+  latest: "Oct 2026: unveiled its antibody-design platform and first pipeline programs."
+  url: https://www.xaira.com
+  source: https://www.xaira.com/news-content
+
+- id: chai
+  name: Chai Discovery
+  kind: private
+  focus: ai-discovery
+  what: Builds AI models (Chai-2, Chai-3) that design antibodies from scratch.
+  latest: "Oct 2026: signed a GSK collaboration, after deals with Lilly, Pfizer, Novartis and others. Raised a $400M Series C in Jul."
+  url: https://www.chaidiscovery.com
+  source: https://www.chaidiscovery.com/news
+
+- id: bioage
+  name: BioAge Labs
+  ticker: BIOA
+  kind: public
+  focus: longevity
+  what: Picks drug targets from human aging data. Lead drug is the anti-inflammation pill BGE-102.
+  latest: "Aug 2026: Phase 2 trial under way; about $381M in cash, which it says lasts through 2029."
+  url: https://bioagelabs.com
+  source: https://www.sec.gov/Archives/edgar/data/0001709941/000119312526335368/bioa-ex99_1.htm
+
+- id: altos
+  name: Altos Labs
+  kind: private
+  focus: longevity
+  what: Launched in 2022 with $3B to study cell rejuvenation — resetting cells to a younger, healthier state.
+  latest: "Apr 2026: co-founder Peter Walter moved to the Buck Institute, one of several reported senior departures."
+  url: https://altoslabs.com
+  source: https://www.buckinstitute.org/news/the-buck-institute-welcomes-renowned-cell-biologist-dr-peter-walter-to-faculty/
+
+- id: newlimit
+  name: NewLimit
+  kind: private
+  focus: longevity
+  what: Aims to reprogram aged cells back to youthful function; its first medicine targets the liver.
+  latest: "Jun 2026: raised a $435M Series C led by Founders Fund at about a $3.1B valuation to fund its first clinical trial."
+  url: https://www.newlimit.com
+  source: https://statnews.com/2026/06/02/longevity-startup-newlimit-announces-435-million-clinical-trial-financing/
+
+- id: retro
+  name: Retro Biosciences
+  kind: private
+  focus: longevity
+  what: Backed by Sam Altman, working on autophagy (cell clean-up), cell therapy and reprogramming to add healthy years.
+  latest: "May 2026: first close of a new round at a $1.8B pre-money valuation. Its autophagy pill RTR242 is in Phase 1."
+  url: https://www.retro.bio
+  source: https://www.retro.bio/blog/fundraise-2026
+
+- id: calico
+  name: Calico Life Sciences
+  kind: private
+  focus: longevity
+  what: Alphabet-owned company studying the biology of aging and age-related disease.
+  latest: "Jun 2026: its drug fosigotifator got FDA Breakthrough Therapy status for vanishing white matter disease, a rare brain disorder."
+  url: https://www.calicolabs.com
+  source: https://www.calicolabs.com/news
+
+- id: loyal
+  name: Loyal
+  kind: private
+  focus: longevity
+  what: Develops drugs to extend dogs' healthy lifespan; lead drug LOY-002 is for senior dogs.
+  latest: "Feb 2026: raised a $100M Series C, bringing total funding past $250M."
+  url: https://loyal.com
+  source: https://loyal.com/posts/series-c-announcement
+
+- id: arc-institute
+  name: Arc Institute
+  kind: nonprofit
+  focus: platform
+  what: Nonprofit research institute building AI models of cells ("virtual cells") and DNA (the Evo models).
+  latest: "Aug 2026: opened the 2026 Virtual Cell Challenge with a $100K top prize; final submissions due Nov 5."
+  url: https://arcinstitute.org
+  source: https://arcinstitute.org/news/virtual-cell-challenge-2026
+
+- id: evolutionaryscale
+  name: EvolutionaryScale (now part of Biohub)
+  kind: nonprofit
+  focus: platform
+  what: Maker of the ESM protein-language AI models; the team joined Chan Zuckerberg's Biohub in Nov 2025.
+  latest: "Nov 2025: co-founder Alex Rives became Biohub's head of science; ESM models are now served through Biohub."
+  url: https://www.evolutionaryscale.ai
+  source: https://biohub.org/news/ai-biology-cure-disease/

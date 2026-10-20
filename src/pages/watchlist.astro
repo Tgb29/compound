@@ -1,0 +1,214 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { formatDate } from '../lib/dates';
+import { href } from '../lib/paths';
+
+// Closest to patients first.
+const stageRank = (stage: string) => {
+  const s = stage.toLowerCase();
+  if (s.startsWith('approved')) return 0;
+  if (s.startsWith('filed') || s.includes('review')) return 1;
+  if (s.includes('phase 3')) return 2;
+  if (s.includes('phase 2')) return 3;
+  return 4;
+};
+const medicines = (await getCollection('medicines')).sort(
+  (a, b) => stageRank(a.data.stage) - stageRank(b.data.stage) || a.data.name.localeCompare(b.data.name),
+);
+const companies = await getCollection('companies');
+
+const medicineGroups = [
+  { key: 'obesity', label: 'Obesity & metabolism', blurb: 'The GLP-1 era and what comes after it.' },
+  { key: 'longevity', label: 'Longevity', blurb: 'Drugs aimed at aging itself, or tested that way.' },
+  { key: 'ai-discovered', label: 'Discovered with AI', blurb: 'Drugs where AI did real work in finding them.' },
+  { key: 'other', label: 'Other', blurb: '' },
+] as const;
+
+const companyGroups = [
+  { key: 'longevity', label: 'Longevity' },
+  { key: 'ai-discovery', label: 'AI drug discovery' },
+  { key: 'obesity', label: 'Obesity' },
+  { key: 'platform', label: 'Research platforms' },
+  { key: 'big-pharma', label: 'Big pharma' },
+] as const;
+
+const kindLabel = { public: 'Public', private: 'Private', nonprofit: 'Nonprofit' };
+---
+
+<Base title="Watchlist" description="The medicines and companies worth tracking in obesity, longevity and AI drug discovery." wide>
+  <p class="eyebrow">Watchlist</p>
+  <h1>What I'm tracking</h1>
+  <p class="lede narrow">
+    The medicines and companies that keep showing up in the briefs. Each card says where things stand, what to watch
+    next, and links to the source. Stages change — check the “as of” date.
+  </p>
+  <p class="small muted narrow">
+    New to trial phases? <a href={href('/learn/how-a-medicine-gets-made/')}>How a new medicine gets made</a> explains them
+    in five minutes.
+  </p>
+
+  <h2 class="section" id="medicines">Medicines</h2>
+  {
+    medicineGroups.map((group) => {
+      const list = medicines.filter((m) => m.data.area === group.key);
+      if (!list.length) return null;
+      return (
+        <section class="group">
+          <h3>{group.label}</h3>
+          {group.blurb && <p class="muted small">{group.blurb}</p>}
+          <div class="grid">
+            {list.map(({ data: m }) => (
+              <article class="card med">
+                <header>
+                  <h4>{m.name}</h4>
+                  <span class="chip accent">{m.stage}</span>
+                </header>
+                <p class="who small muted">
+                  {m.company}
+                  {m.ticker && <span class="chip">{m.ticker}</span>}
+                </p>
+                <p>{m.what}</p>
+                <dl>
+                  <dt>Latest</dt>
+                  <dd>{m.latest}</dd>
+                  <dt>Watch next</dt>
+                  <dd>{m.next}</dd>
+                </dl>
+                <p class="foot small muted">
+                  As of {formatDate(m.asof)} ·{' '}
+                  <a href={m.source} rel="noopener" target="_blank">
+                    Source ↗
+                  </a>
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+      );
+    })
+  }
+
+  <h2 class="section" id="companies">Companies</h2>
+  {
+    companyGroups.map((group) => {
+      const list = companies
+        .filter((c) => c.data.focus === group.key)
+        .sort((a, b) => a.data.name.localeCompare(b.data.name));
+      if (!list.length) return null;
+      return (
+        <section class="group">
+          <h3>{group.label}</h3>
+          <div class="grid">
+            {list.map(({ data: c }) => (
+              <article class="card co">
+                <header>
+                  <h4>
+                    <a href={c.url} rel="noopener" target="_blank">
+                      {c.name}
+                    </a>
+                  </h4>
+                  <span class="chip">{c.ticker ? `${kindLabel[c.kind]} · ${c.ticker}` : kindLabel[c.kind]}</span>
+                </header>
+                <p>{c.what}</p>
+                <p class="small">
+                  <strong>Latest:</strong> {c.latest}{' '}
+                  <a href={c.source} rel="noopener" target="_blank">
+                    Source ↗
+                  </a>
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+      );
+    })
+  }
+</Base>
+
+<style>
+  .narrow {
+    max-width: 680px;
+  }
+  .group {
+    margin-top: 24px;
+  }
+  .group > h3 {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .group > p {
+    margin-bottom: 12px;
+  }
+  .group .grid {
+    margin-top: 10px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .card header .chip {
+    white-space: normal;
+    text-align: right;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  h4 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.25;
+  }
+  h4 a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  h4 a:hover {
+    color: var(--accent-ink);
+  }
+  .who {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .card p {
+    font-size: 0.95rem;
+  }
+  dl {
+    margin: 0 0 12px;
+    font-size: 0.92rem;
+  }
+  dt {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  dd {
+    margin: 2px 0 10px;
+  }
+  .foot {
+    margin: auto 0 0;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+  }
+  .co p:last-child {
+    margin-bottom: 0;
+    margin-top: auto;
+  }
+</style>

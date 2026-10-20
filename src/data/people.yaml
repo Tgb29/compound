@@ -1,0 +1,184 @@
+# People and accounts to follow.
+# category: news | investing | longevity | ai-bio | clinicians
+
+- id: statnews
+  name: STAT
+  handle: statnews
+  url: https://x.com/statnews
+  category: news
+  why: The main health and biotech newsroom — posts all day on drugs, FDA decisions, obesity drugs and longevity.
+
+- id: endpts
+  name: Endpoints News
+  handle: endpts
+  url: https://x.com/endpts
+  category: news
+  why: A fast feed of biotech deals, funding rounds, trial readouts and layoffs.
+
+- id: fiercebiotech
+  name: Fierce Biotech
+  handle: FierceBiotech
+  url: https://x.com/FierceBiotech
+  category: news
+  why: Trade news on R&D, startups and hiring — useful for seeing which companies are growing.
+
+- id: matthewherper
+  name: Matthew Herper
+  handle: matthewherper
+  url: https://x.com/matthewherper
+  category: news
+  why: STAT senior writer who has covered drug development for 20+ years; clear on which results really matter.
+
+- id: adamfeuerstein
+  name: Adam Feuerstein
+  handle: adamfeuerstein
+  url: https://x.com/adamfeuerstein
+  category: news
+  why: STAT biotech columnist and a sharp skeptic of hype and weak trial data.
+
+- id: ldtimmerman
+  name: Luke Timmerman
+  handle: ldtimmerman
+  url: https://x.com/ldtimmerman
+  category: news
+  why: Timmerman Report and The Long Run podcast — long interviews with the people behind new medicines.
+
+- id: dereklowe
+  name: Derek Lowe
+  handle: dereklowe.bsky.social
+  url: https://bsky.app/profile/dereklowe.bsky.social
+  category: news
+  why: The medicinal chemist behind In the Pipeline. Posts daily on Bluesky, not X.
+
+- id: bradloncar
+  name: Brad Loncar
+  handle: bradloncar
+  url: https://x.com/bradloncar
+  category: investing
+  why: Biotech investor with plain-spoken takes on the XBI, market mood, China biotech and deals.
+
+- id: lifescivc
+  name: Bruce Booth
+  handle: LifeSciVC
+  url: https://x.com/LifeSciVC
+  category: investing
+  why: Atlas Venture partner who explains how biotech startups are founded, funded and built.
+
+- id: peterkolchinsky
+  name: Peter Kolchinsky
+  handle: PeterKolchinsky
+  url: https://x.com/PeterKolchinsky
+  category: investing
+  why: RA Capital managing partner; thoughtful on biotech economics and drug pricing policy.
+
+- id: jorgeconde
+  name: Jorge Conde
+  handle: JorgeCondeBio
+  url: https://x.com/JorgeCondeBio
+  category: investing
+  why: General partner at a16z Bio + Health — a window on where AI-bio venture money is going.
+
+- id: laurademing
+  name: Laura Deming
+  handle: LauraDeming
+  url: https://x.com/LauraDeming
+  category: longevity
+  why: Founded the Longevity Fund, now runs Until Labs (reversible cryopreservation). An early longevity-biotech voice.
+
+- id: jacobkimmel
+  name: Jacob Kimmel
+  handle: jacobkimmel
+  url: https://x.com/jacobkimmel
+  category: longevity
+  why: NewLimit co-founder with clear essays on cell reprogramming and why drug discovery got slower.
+
+- id: mkaeberlein
+  name: Matt Kaeberlein
+  handle: mkaeberlein
+  url: https://x.com/mkaeberlein
+  category: longevity
+  why: Aging biologist who calls out "science by press release" and checks longevity and GLP-1 claims.
+
+- id: newlimit
+  name: NewLimit
+  handle: newlimit
+  url: https://x.com/newlimit
+  category: longevity
+  why: Brian Armstrong's reprogramming company — progress updates on its path to human trials. Posts rarely.
+
+- id: bryan-johnson
+  name: Bryan Johnson
+  handle: bryan_johnson
+  url: https://x.com/bryan_johnson
+  category: longevity
+  why: The most visible longevity self-experimenter. Worth knowing about; read his claims skeptically.
+
+- id: pdhsu
+  name: Patrick Hsu
+  handle: pdhsu
+  url: https://x.com/pdhsu
+  category: ai-bio
+  why: Arc Institute co-founder posting on genome editing, virtual cell models and the AI-meets-biology frontier.
+
+- id: elliothershberg
+  name: Elliot Hershberg
+  handle: ElliotHershberg
+  url: https://x.com/ElliotHershberg
+  category: ai-bio
+  why: Writes Century of Bio and surfaces the best AI-x-bio thinkers and papers.
+
+- id: demishassabis
+  name: Demis Hassabis
+  handle: demishassabis
+  url: https://x.com/demishassabis
+  category: ai-bio
+  why: Runs Google DeepMind and Isomorphic Labs; shared the Nobel for AlphaFold.
+
+- id: alexrives
+  name: Alex Rives
+  handle: alexrives
+  url: https://x.com/alexrives
+  category: ai-bio
+  why: Created the ESM protein models; now head of science at Biohub.
+
+- id: joshim5
+  name: Joshua Meier
+  handle: joshim5
+  url: https://x.com/joshim5
+  category: ai-bio
+  why: Chai Discovery co-founder — AI-designed antibodies and big-pharma partnerships as they happen.
+
+- id: brianhie
+  name: Brian Hie
+  handle: BrianHie
+  url: https://x.com/BrianHie
+  category: ai-bio
+  why: Stanford/Arc researcher behind the Evo DNA language models — generative biology explained by its builder.
+
+- id: erictopol
+  name: Eric Topol
+  handle: EricTopol
+  url: https://x.com/EricTopol
+  category: clinicians
+  why: Cardiologist and researcher with daily digests of new papers on AI in medicine, GLP-1s and healthy aging.
+
+- id: bob-wachter
+  name: Bob Wachter
+  handle: Bob_Wachter
+  url: https://x.com/Bob_Wachter
+  category: clinicians
+  why: UCSF chair of medicine and author of a 2026 book on AI in healthcare — a practical clinician's view.
+
+- id: adamrodman
+  name: Adam Rodman
+  handle: AdamRodmanMD
+  url: https://x.com/AdamRodmanMD
+  category: clinicians
+  why: Internist who studies how AI reasons through medical cases.
+
+- id: drnadolsky
+  name: Spencer Nadolsky
+  handle: DrNadolsky
+  url: https://x.com/DrNadolsky
+  category: clinicians
+  why: Obesity-medicine doctor with practical, myth-busting posts on GLP-1 drugs from real patient care.

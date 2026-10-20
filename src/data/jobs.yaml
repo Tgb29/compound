@@ -1,0 +1,86 @@
+# Where to find jobs.
+# kind: board | vc-board | company
+
+- id: biospace
+  name: BioSpace Jobs
+  kind: board
+  url: https://jobs.biospace.com/
+  why: The largest life-sciences job board. Filter by R&D, clinical, regulatory or manufacturing.
+
+- id: linkedin
+  name: LinkedIn biotech search
+  kind: board
+  url: https://www.linkedin.com/jobs/search/?keywords=biotech
+  why: Thousands of US listings. Swap the keyword for "longevity", "GLP-1" or "computational biology" and set alerts.
+
+- id: work-at-a-startup
+  name: Y Combinator Work at a Startup
+  kind: board
+  url: https://www.workatastartup.com/
+  why: One profile to apply to YC startups. Filter to healthcare and biotech for early-stage roles.
+
+- id: a16z
+  name: a16z portfolio jobs
+  kind: vc-board
+  url: https://jobs.a16z.com/
+  why: Jobs across a16z's companies. Set Focus Areas to Bio + Health for AI-bio and health-tech startups.
+
+- id: flagship
+  name: Flagship Pioneering open roles
+  kind: vc-board
+  url: https://www.flagshippioneering.com/join/roles
+  why: Roles across Flagship-founded biotechs (the firm behind Moderna), plus a fellowship for early-career builders.
+
+- id: lux
+  name: Lux Capital job board
+  kind: vc-board
+  url: https://jobs.luxcapital.com/
+  why: Jobs at deep-tech and biotech startups backed by Lux.
+
+- id: arc-institute
+  name: Arc Institute
+  kind: company
+  url: https://arcinstitute.org/jobs
+  why: Nonprofit institute hiring ML, computational biology and lab scientists.
+
+- id: isomorphic
+  name: Isomorphic Labs
+  kind: company
+  url: https://www.isomorphiclabs.com/job-openings
+  why: DeepMind's drug-discovery spinout — ML research, engineering, chemistry and clinical roles in London, Lausanne and Cambridge, MA.
+
+- id: chai
+  name: Chai Discovery
+  kind: company
+  url: https://www.chaidiscovery.com/careers
+  why: AI drug-design startup hiring ML engineers and antibody scientists.
+
+- id: newlimit
+  name: NewLimit
+  kind: company
+  url: https://www.newlimit.com/careers
+  why: Longevity reprogramming company hiring scientists, clinical operations and engineers in South San Francisco.
+
+- id: altos
+  name: Altos Labs
+  kind: company
+  url: https://www.altoslabs.com/careers
+  why: Well-funded cell-rejuvenation company hiring discovery scientists and ML researchers.
+
+- id: retro
+  name: Retro Biosciences
+  kind: company
+  url: https://www.retro.bio/careers
+  why: Longevity biotech in Redwood City hiring from lab technicians to senior leaders.
+
+- id: lilly
+  name: Eli Lilly
+  kind: company
+  url: https://careers.lilly.com/
+  why: The biggest employer in obesity drugs, hiring across R&D, manufacturing and commercial.
+
+- id: novo
+  name: Novo Nordisk
+  kind: company
+  url: https://www.novonordisk.com/careers.html
+  why: Maker of Wegovy and Ozempic, with obesity and diabetes roles worldwide.

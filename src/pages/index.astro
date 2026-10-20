@@ -1,0 +1,171 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Streak from '../components/Streak.astro';
+import { SITE } from '../site';
+import { publishedBriefs } from '../lib/briefs';
+import { formatDay, todayId } from '../lib/dates';
+import { href } from '../lib/paths';
+import { CATEGORY_META, CATEGORY_ORDER } from '../lib/categories';
+
+const briefs = await publishedBriefs();
+const latest = briefs[0];
+const primers = (await getCollection('learn')).sort((a, b) => a.data.order - b.data.order).slice(0, 3);
+const latestItems = latest
+  ? [...latest.data.items].sort(
+      (a, b) => CATEGORY_ORDER.indexOf(a.category) - CATEGORY_ORDER.indexOf(b.category),
+    )
+  : [];
+---
+
+<Base>
+  <section class="hero">
+    <p class="eyebrow">Learning biotech in public</p>
+    <h1>{SITE.tagline}</h1>
+    <p class="lede">
+      Every day: the deals, market moves, new medicines and papers worth knowing about — each with a plain-English note
+      on why it matters. Written for people getting into the space, me included.
+    </p>
+  </section>
+
+  <Streak ids={briefs.map((b) => b.id)} today={todayId()} />
+
+  {
+    latest && (
+      <section class="section">
+        <div class="section-head">
+          <h2>Latest brief</h2>
+          <a href={href('/daily/')}>All briefs →</a>
+        </div>
+        <a class="latest card" href={href(`/daily/${latest.id}/`)}>
+          <p class="eyebrow">{formatDay(latest.id)}</p>
+          <h3>{latest.data.title}</h3>
+          <p class="muted">{latest.data.summary}</p>
+          <ul class="headlines">
+            {latestItems.map((item) => (
+              <li>
+                <span class:list={['dot', item.category]} title={CATEGORY_META[item.category].label} />
+                {item.headline}
+              </li>
+            ))}
+          </ul>
+          <span class="read">Read today's brief →</span>
+        </a>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <div class="section-head">
+      <h2>New here? Start with these</h2>
+      <a href={href('/learn/')}>All primers →</a>
+    </div>
+    <div class="primers">
+      {
+        primers.map((p) => (
+          <a class="card primer" href={href(`/learn/${p.id}/`)}>
+            <h3>{p.data.title}</h3>
+            <p class="muted small">{p.data.summary}</p>
+            <span class="small muted">{p.data.minutes} min read</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What gets covered</h2>
+    <ul class="cats">
+      {
+        CATEGORY_ORDER.map((c) => (
+          <li>
+            <span class:list={['dot', c]} />
+            <div>
+              <strong>{CATEGORY_META[c].label}</strong>
+              <span class="muted"> — {CATEGORY_META[c].blurb}</span>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="muted small">
+      Plus a <a href={href('/watchlist/')}>watchlist</a> of medicines and companies, the
+      <a href={href('/follow/')}>people worth following</a>, and <a href={href('/jobs/')}>where to find jobs</a> in the
+      space.
+    </p>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    margin: 12px 0 32px;
+  }
+  .hero h1 {
+    max-width: 18ch;
+  }
+  .latest {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.15s;
+  }
+  .latest:hover {
+    border-color: var(--accent);
+    color: inherit;
+  }
+  .latest h3 {
+    font-size: 1.5rem;
+  }
+  .headlines {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 14px;
+    display: grid;
+    gap: 8px;
+  }
+  .headlines li {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 0.97rem;
+  }
+  .headlines .dot {
+    position: relative;
+    top: -1px;
+  }
+  .read {
+    color: var(--accent-ink);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .primers {
+    display: grid;
+    gap: 14px;
+  }
+  .primer {
+    color: inherit;
+    text-decoration: none;
+  }
+  .primer:hover {
+    border-color: var(--accent);
+    color: inherit;
+  }
+  .primer h3 {
+    margin-bottom: 6px;
+  }
+  .primer p {
+    margin-bottom: 8px;
+  }
+  .cats {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: grid;
+    gap: 10px;
+  }
+  .cats li {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+</style>

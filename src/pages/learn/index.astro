@@ -1,0 +1,86 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { href } from '../../lib/paths';
+
+const primers = (await getCollection('learn')).sort((a, b) => a.data.order - b.data.order);
+const termCount = (await getCollection('glossary')).length;
+---
+
+<Base title="Learn" description="Short, plain-English primers for getting into biotech, longevity and AI in medicine.">
+  <p class="eyebrow">Learn</p>
+  <h1>Start here</h1>
+  <p class="lede">
+    Short primers that explain the basics without the jargon. Read them in order if you're new — each one makes the daily
+    briefs easier to follow.
+  </p>
+
+  <ol class="primers">
+    {
+      primers.map((p, i) => (
+        <li>
+          <a class="card" href={href(`/learn/${p.id}/`)}>
+            <span class="num">{i + 1}</span>
+            <span>
+              <span class="title">{p.data.title}</span>
+              <span class="summary">{p.data.summary}</span>
+              <span class="small muted">{p.data.minutes} min read</span>
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+
+  <a class="card glossary" href={href('/learn/glossary/')}>
+    <span class="title">Glossary</span>
+    <span class="summary">{termCount} terms you'll see in the briefs, each in a sentence or two.</span>
+  </a>
+</Base>
+
+<style>
+  .primers {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 14px;
+    display: grid;
+    gap: 12px;
+  }
+  .primers a,
+  .glossary {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    color: inherit;
+    text-decoration: none;
+  }
+  .glossary {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .primers a:hover,
+  .glossary:hover {
+    border-color: var(--accent);
+    color: inherit;
+  }
+  .primers a > span:last-child {
+    display: grid;
+    gap: 4px;
+  }
+  .num {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--accent-ink);
+    line-height: 1.1;
+  }
+  .title {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  .summary {
+    color: var(--muted);
+  }
+</style>

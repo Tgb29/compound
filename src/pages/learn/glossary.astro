@@ -1,0 +1,106 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { href } from '../../lib/paths';
+
+const terms = (await getCollection('glossary')).sort((a, b) =>
+  a.data.term.localeCompare(b.data.term, 'en', { sensitivity: 'base' }),
+);
+const primers = new Map((await getCollection('learn')).map((p) => [p.id, p.data.title]));
+const letters = [...new Set(terms.map((t) => t.data.term[0].toUpperCase()))];
+---
+
+<Base title="Glossary" description="The terms you'll see in biotech news, explained in a sentence or two.">
+  <a class="back" href={href('/learn/')}>← Learn</a>
+  <p class="eyebrow">Glossary</p>
+  <h1>Words you'll see a lot</h1>
+  <p class="lede">Biotech news assumes you know these. Each one in plain English; new ones get added as they come up.</p>
+
+  <nav class="letters" aria-label="Jump to letter">
+    {letters.map((l) => <a href={`#letter-${l}`}>{l}</a>)}
+  </nav>
+
+  <dl class="terms">
+    {
+      terms.map((t, i) => {
+        const letter = t.data.term[0].toUpperCase();
+        const firstOfLetter = i === 0 || terms[i - 1].data.term[0].toUpperCase() !== letter;
+        return (
+          <div class="term" id={t.id}>
+            {firstOfLetter && <span id={`letter-${letter}`} class="anchor" />}
+            <dt>
+              <a href={`#${t.id}`}>{t.data.term}</a>
+            </dt>
+            <dd>
+              {t.data.definition}
+              {t.data.learn && primers.has(t.data.learn) && (
+                <>
+                  {' '}
+                  <a class="small" href={href(`/learn/${t.data.learn}/`)}>
+                    More in “{primers.get(t.data.learn)}” →
+                  </a>
+                </>
+              )}
+            </dd>
+          </div>
+        );
+      })
+    }
+  </dl>
+</Base>
+
+<style>
+  .letters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 20px 0 8px;
+  }
+  .letters a {
+    min-width: 32px;
+    text-align: center;
+    padding: 4px 6px;
+    border-radius: 6px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .terms {
+    margin: 0;
+  }
+  .term {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 16px;
+  }
+  .term:target {
+    background: var(--accent-soft);
+    margin: 0 -12px;
+    padding: 16px 12px;
+    border-radius: 8px;
+  }
+  .anchor {
+    display: block;
+    position: relative;
+    top: -16px;
+  }
+  dt a {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  dd {
+    margin: 4px 0 0;
+    font-family: var(--serif);
+    font-size: 1.08rem;
+    line-height: 1.6;
+  }
+  dd .small {
+    font-family: var(--sans);
+    white-space: nowrap;
+  }
+</style>

@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const jobs = await getCollection('jobs');
+const groups = [
+  { key: 'board', label: 'Job boards', blurb: 'Search across many companies at once.' },
+  { key: 'vc-board', label: 'Investor portfolio boards', blurb: 'Venture firms list open roles at the startups they back — often earlier than anywhere else.' },
+  { key: 'company', label: 'Companies worth watching', blurb: 'Careers pages for teams working on longevity and AI in medicine.' },
+] as const;
+---
+
+<Base title="Jobs" description="Where to find jobs in biotech, longevity and AI in medicine — and how people get in." wide>
+  <p class="eyebrow">Jobs</p>
+  <h1>Getting into the space</h1>
+  <p class="lede narrow">
+    You don't need a PhD to work in biotech. Most companies need engineers, data people, operators, writers and
+    business folks alongside scientists. Here's where the roles get posted.
+  </p>
+
+  <section class="paths narrow">
+    <h2 class="section">Three common ways in</h2>
+    <ol>
+      <li>
+        <strong>Science and research.</strong> Lab, clinical and regulatory roles. A life-science degree helps; research
+        associate jobs are the usual first step.
+      </li>
+      <li>
+        <strong>Data and engineering.</strong> AI-bio companies hire software, ML and data engineers who are willing to learn
+        the biology. Strong demand, and the fastest-growing door.
+      </li>
+      <li>
+        <strong>Business and operations.</strong> Business development, finance, investing, operations, policy and
+        communications. Knowing the science at the level of these briefs is a real edge.
+      </li>
+    </ol>
+  </section>
+
+  {
+    groups.map((group) => {
+      const list = jobs.filter((j) => j.data.kind === group.key);
+      if (!list.length) return null;
+      return (
+        <section class="group">
+          <h2 class="section">{group.label}</h2>
+          <p class="muted">{group.blurb}</p>
+          <ul class="grid list">
+            {list.map(({ data: j }) => (
+              <li class="card">
+                <a class="name" href={j.url} rel="noopener" target="_blank">
+                  {j.name} ↗
+                </a>
+                <p class="small">{j.why}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      );
+    })
+  }
+</Base>
+
+<style>
+  .narrow {
+    max-width: 680px;
+  }
+  .paths ol {
+    padding-left: 1.2em;
+    display: grid;
+    gap: 10px;
+    font-family: var(--serif);
+    font-size: 1.1rem;
+  }
+  .group > p {
+    margin-bottom: 14px;
+  }
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .list li {
+    padding: 16px 18px;
+  }
+  .name {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .name:hover {
+    color: var(--accent-ink);
+  }
+  .list p {
+    margin: 6px 0 0;
+  }
+</style>

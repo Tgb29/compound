@@ -1,0 +1,213 @@
+# One entry per term. `id` becomes the anchor: /learn/glossary/#<id>
+# `learn` (optional) links to a primer by its file name.
+
+- id: agonist
+  term: Agonist
+  definition: A drug that switches a receptor on, mimicking a natural signal. GLP-1 drugs are agonists of the GLP-1 receptor. The opposite, which blocks a receptor, is an antagonist.
+  learn: glp1s-and-whats-next
+
+- id: amylin
+  term: Amylin
+  definition: A hormone released with insulin after meals that signals fullness. Drugs that mimic it, like cagrilintide, are being combined with GLP-1 drugs for more weight loss.
+  learn: glp1s-and-whats-next
+
+- id: antibody
+  term: Antibody
+  definition: A Y-shaped immune protein that latches onto one specific target. Many of the best-selling drugs are lab-made antibodies, given by injection or infusion.
+
+- id: adc
+  term: Antibody-drug conjugate (ADC)
+  definition: An antibody with a toxic drug attached. The antibody finds cancer cells and delivers the poison directly to them, sparing more healthy tissue. One of the hottest areas for deals.
+
+- id: binary-event
+  term: Binary event
+  definition: A scheduled event, like a trial readout, where the result is close to pass-or-fail and can send a stock sharply up or down.
+  learn: read-biotech-like-an-investor
+
+- id: biobucks
+  term: Biobucks (milestone payments)
+  definition: The part of a deal that is only paid if a drug hits future goals, like passing a trial or getting approved. Headline deal values are often mostly biobucks; the upfront payment is the real cash.
+  learn: read-biotech-like-an-investor
+
+- id: biologic
+  term: Biologic
+  definition: A large-molecule drug made by living cells, such as an antibody or peptide. Usually injected rather than taken as a pill. Approved through a BLA.
+  learn: how-a-medicine-gets-made
+
+- id: biomarker
+  term: Biomarker
+  definition: Something measurable in the body — a blood level, a scan feature, a gene — that signals a disease or a drug's effect.
+
+- id: bla
+  term: BLA
+  definition: Biologics License Application — the filing a company submits to the FDA to approve a biologic drug. The small-molecule equivalent is an NDA.
+  learn: how-a-medicine-gets-made
+
+- id: breakthrough-therapy
+  term: Breakthrough Therapy designation
+  definition: An FDA label for drugs that look substantially better than existing treatments for a serious disease. It brings more FDA guidance and a faster path, not an approval.
+  learn: how-a-medicine-gets-made
+
+- id: cash-runway
+  term: Cash runway
+  definition: How long a company's cash will last at its current spending. A short runway usually means it will raise money soon.
+  learn: read-biotech-like-an-investor
+
+- id: catalyst
+  term: Catalyst
+  definition: A scheduled event that can move a biotech stock — a trial readout, an FDA decision date, or data at a medical conference.
+  learn: read-biotech-like-an-investor
+
+- id: senescence
+  term: Cellular senescence
+  definition: When damaged cells stop dividing but don't die, lingering and releasing inflammatory signals. One of the hallmarks of aging; drugs that clear these cells are called senolytics.
+  learn: longevity-without-the-hype
+
+- id: clinical-trial-phases
+  term: Clinical trial phases
+  definition: The three stages of testing in people. Phase 1 checks safety and dose in a small group; Phase 2 checks whether it seems to work; Phase 3 confirms it works in hundreds to thousands of patients.
+  learn: how-a-medicine-gets-made
+
+- id: crl
+  term: Complete Response Letter (CRL)
+  definition: The FDA's rejection letter. It lists what the company must fix — more data, a new trial, manufacturing problems — before the drug can be approved.
+  learn: how-a-medicine-gets-made
+
+- id: dilution
+  term: Dilution
+  definition: When a company sells new shares to raise money, each existing share owns a smaller slice. Stocks often drop on the news.
+  learn: read-biotech-like-an-investor
+
+- id: double-blind
+  term: Double-blind
+  definition: A trial where neither patients nor doctors know who got the drug and who got the placebo, so expectations can't skew the results.
+  learn: how-to-read-a-paper
+
+- id: epigenetic-clock
+  term: Epigenetic clock
+  definition: A test that estimates biological age from chemical tags on DNA. A useful research tool, but not yet proof that a treatment helps people live longer.
+  learn: longevity-without-the-hype
+
+- id: glp-1
+  term: GLP-1
+  definition: A gut hormone released after eating that signals fullness, slows digestion and helps release insulin. Drugs that mimic it — semaglutide, tirzepatide — transformed obesity treatment.
+  learn: glp1s-and-whats-next
+
+- id: gip
+  term: GIP
+  definition: A second gut hormone involved in blood sugar and appetite. Tirzepatide hits both the GIP and GLP-1 receptors, which is part of why it causes more weight loss than semaglutide.
+  learn: glp1s-and-whats-next
+
+- id: hallmarks-of-aging
+  term: Hallmarks of aging
+  definition: A widely used list of twelve biological processes that go wrong as we age, from DNA damage to chronic inflammation. Most longevity companies target one of them.
+  learn: longevity-without-the-hype
+
+- id: healthspan
+  term: Healthspan
+  definition: The number of years you live in good health, as opposed to lifespan, the total years you live.
+  learn: longevity-without-the-hype
+
+- id: ind
+  term: IND
+  definition: Investigational New Drug application — what a company files with the FDA before it can test a drug in people for the first time.
+  learn: how-a-medicine-gets-made
+
+- id: licensing-deal
+  term: Licensing deal
+  definition: One company buys the rights to develop and sell a specific drug, usually for an upfront payment plus milestones and royalties, instead of buying the whole company.
+  learn: read-biotech-like-an-investor
+
+- id: mash
+  term: MASH
+  definition: Metabolic dysfunction-associated steatohepatitis — fatty liver disease with inflammation that can lead to scarring and liver failure. Formerly called NASH; GLP-1 drugs are now used for it.
+  learn: glp1s-and-whats-next
+
+- id: mtor
+  term: mTOR
+  definition: A protein that acts as a cell's nutrient sensor and growth switch. Dialing it down with the drug rapamycin extends lifespan in mice.
+  learn: longevity-without-the-hype
+
+- id: nda
+  term: NDA
+  definition: New Drug Application — the filing a company submits to the FDA to approve a small-molecule drug. The biologic equivalent is a BLA.
+  learn: how-a-medicine-gets-made
+
+- id: partial-reprogramming
+  term: Partial reprogramming
+  definition: Briefly switching on the genes that can turn adult cells into stem cells, aiming to make cells act younger without changing what kind of cell they are. Backed by Altos Labs, NewLimit and Retro.
+  learn: longevity-without-the-hype
+
+- id: patent-cliff
+  term: Patent cliff
+  definition: When a best-selling drug loses patent protection and cheaper copies arrive, its sales drop sharply. Pharma companies facing one tend to buy biotechs.
+  learn: read-biotech-like-an-investor
+
+- id: pdufa-date
+  term: PDUFA date
+  definition: The deadline by which the FDA has committed to decide on a drug application — about 10 months after accepting a standard filing, 6 for a priority review. A major catalyst.
+  learn: how-a-medicine-gets-made
+
+- id: peer-review
+  term: Peer review
+  definition: Checking of a study by other scientists before a journal publishes it. Catches many problems, not all of them.
+  learn: how-to-read-a-paper
+
+- id: peptide
+  term: Peptide
+  definition: A short chain of amino acids — a small protein. Many hormones, and the drugs that mimic them like semaglutide, are peptides.
+
+- id: placebo
+  term: Placebo
+  definition: A dummy treatment with no active drug, given to a comparison group so a trial can tell the drug's real effect from expectation and chance.
+  learn: how-to-read-a-paper
+
+- id: preprint
+  term: Preprint
+  definition: A study posted publicly (on bioRxiv or medRxiv) before peer review. Fast and useful, but unchecked.
+  learn: how-to-read-a-paper
+
+- id: primary-endpoint
+  term: Primary endpoint
+  definition: The main result a trial is designed to measure, chosen before it starts. "Met the primary endpoint" means the trial succeeded on its main goal.
+  learn: how-a-medicine-gets-made
+
+- id: rct
+  term: Randomized controlled trial (RCT)
+  definition: A trial that assigns people to the drug or a comparison group by chance. The strongest way to show a treatment causes an effect.
+  learn: how-to-read-a-paper
+
+- id: small-molecule
+  term: Small molecule
+  definition: A drug made of a small chemical compound, often taken as a pill. Most traditional medicines are small molecules.
+  learn: how-a-medicine-gets-made
+
+- id: target
+  term: Target
+  definition: The molecule in the body — usually a protein — that a drug is designed to act on.
+  learn: how-a-medicine-gets-made
+
+- id: topline-results
+  term: Topline results
+  definition: The first headline numbers from a trial, usually in a press release, before the full data is presented or published.
+  learn: how-a-medicine-gets-made
+
+- id: triple-agonist
+  term: Triple agonist
+  definition: A drug that switches on three hormone receptors at once. Retatrutide hits GLP-1, GIP and glucagon receptors.
+  learn: glp1s-and-whats-next
+
+- id: xbi
+  term: XBI
+  definition: An exchange-traded fund holding hundreds of small and mid-sized US biotech stocks in roughly equal weights. The usual shorthand for how biotech stocks are doing.
+  learn: read-biotech-like-an-investor
+
+- id: accelerated-approval
+  term: Accelerated approval
+  definition: A faster FDA route for serious diseases. A drug can be approved on an early sign that it works, like shrinking tumors, before there's proof patients live longer. The company must keep studying it, and the FDA can pull the approval if the benefit doesn't hold up.
+  learn: how-a-medicine-gets-made
+
+- id: post-hoc-analysis
+  term: Post hoc analysis
+  definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
+  learn: how-to-read-a-paper

@@ -1,0 +1,126 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const people = await getCollection('people');
+const reading = await getCollection('reading');
+
+const peopleGroups = [
+  { key: 'news', label: 'News & reporters' },
+  { key: 'investing', label: 'Investors & markets' },
+  { key: 'longevity', label: 'Longevity' },
+  { key: 'ai-bio', label: 'AI × biology' },
+  { key: 'clinicians', label: 'Doctors who explain' },
+] as const;
+
+const readingGroups = [
+  { key: 'newsletter', label: 'Newsletters' },
+  { key: 'blog', label: 'Blogs' },
+  { key: 'podcast', label: 'Podcasts' },
+] as const;
+
+const handleOf = (url: string, handle?: string) => {
+  const host = new URL(url).hostname.replace(/^www\./, '');
+  if (!handle) return host;
+  return host === 'bsky.app' ? `@${handle} on Bluesky` : `@${handle}`;
+};
+---
+
+<Base title="Follow" description="The people, newsletters and podcasts worth following to keep up with biotech." wide>
+  <p class="eyebrow">Follow</p>
+  <h1>Who to follow</h1>
+  <p class="lede narrow">
+    Most biotech news breaks on X and in a handful of newsletters. These are the accounts and reads that make the daily
+    scan — a good starting feed if you're new.
+  </p>
+
+  <h2 class="section">People</h2>
+  {
+    peopleGroups.map((group) => {
+      const list = people.filter((p) => p.data.category === group.key);
+      if (!list.length) return null;
+      return (
+        <section class="group">
+          <h3>{group.label}</h3>
+          <ul class="grid list">
+            {list.map(({ data: p }) => (
+              <li class="card">
+                <a class="name" href={p.url} rel="noopener" target="_blank">
+                  {p.name}
+                </a>
+                <span class="handle small muted">{handleOf(p.url, p.handle)}</span>
+                <p class="small">{p.why}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      );
+    })
+  }
+
+  <h2 class="section">Reading & listening</h2>
+  {
+    readingGroups.map((group) => {
+      const list = reading.filter((r) => r.data.kind === group.key);
+      if (!list.length) return null;
+      return (
+        <section class="group">
+          <h3>{group.label}</h3>
+          <ul class="grid list">
+            {list.map(({ data: r }) => (
+              <li class="card">
+                <a class="name" href={r.url} rel="noopener" target="_blank">
+                  {r.name}
+                </a>
+                {r.by && <span class="handle small muted">{r.by}</span>}
+                <p class="small">{r.why}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      );
+    })
+  }
+</Base>
+
+<style>
+  .narrow {
+    max-width: 680px;
+  }
+  .group {
+    margin-top: 24px;
+  }
+  .group h3 {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .list li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 16px 18px;
+  }
+  .name {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .name:hover {
+    color: var(--accent-ink);
+  }
+  .list p {
+    margin: 6px 0 0;
+  }
+</style>

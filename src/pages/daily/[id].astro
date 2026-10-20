@@ -1,0 +1,128 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import BriefItems from '../../components/BriefItems.astro';
+import { publishedBriefs } from '../../lib/briefs';
+import { formatDay } from '../../lib/dates';
+import { href } from '../../lib/paths';
+
+export async function getStaticPaths() {
+  const briefs = await publishedBriefs();
+  // briefs are newest first; day numbers count from the first brief
+  return briefs.map((brief, i) => ({
+    params: { id: brief.id },
+    props: {
+      brief,
+      day: briefs.length - i,
+      newer: briefs[i - 1]?.id,
+      older: briefs[i + 1]?.id,
+    },
+  }));
+}
+
+const { brief, day, newer, older } = Astro.props;
+const { Content } = await render(brief);
+const hasTake = (brief.body ?? '').replace(/<!--[\s\S]*?-->/g, '').trim().length > 0;
+const glossary = await getCollection('glossary');
+const term = brief.data.term;
+const termEntry = term
+  ? glossary.find((g) => g.id === term.glossary || g.data.term.toLowerCase() === term.name.toLowerCase())
+  : undefined;
+---
+
+<Base title={brief.data.title} description={brief.data.summary}>
+  <a class="back" href={href('/daily/')}>← All briefs</a>
+  <header class="brief-head">
+    <p class="eyebrow">Day {day} · {formatDay(brief.id)}</p>
+    <h1>{brief.data.title}</h1>
+    <p class="lede">{brief.data.summary}</p>
+  </header>
+
+  {
+    hasTake && (
+      <section class="take" aria-labelledby="take-title">
+        <h2 id="take-title" class="eyebrow">My take</h2>
+        <div class="prose">
+          <Content />
+        </div>
+      </section>
+    )
+  }
+
+  <BriefItems items={brief.data.items} />
+
+  <div class="extras">
+    {
+      term && (
+        <aside class="card extra">
+          <p class="eyebrow">Term of the day</p>
+          <h3>{term.name}</h3>
+          <p>{term.definition}</p>
+          {termEntry && (
+            <a class="small" href={href(`/learn/glossary/#${termEntry.id}`)}>
+              More in the glossary →
+            </a>
+          )}
+        </aside>
+      )
+    }
+    {
+      brief.data.read && (
+        <aside class="card extra">
+          <p class="eyebrow">Read in full</p>
+          <h3>
+            <a href={brief.data.read.url} rel="noopener" target="_blank">
+              {brief.data.read.title} ↗
+            </a>
+          </h3>
+          <p class="muted">{brief.data.read.why}</p>
+        </aside>
+      )
+    }
+  </div>
+
+  <nav class="pager" aria-label="More briefs">
+    {older ? <a href={href(`/daily/${older}/`)}>← {formatDay(older, 'short')}</a> : <span />}
+    {newer ? <a href={href(`/daily/${newer}/`)}>{formatDay(newer, 'short')} →</a> : <span />}
+  </nav>
+</Base>
+
+<style>
+  .brief-head {
+    margin-bottom: 8px;
+  }
+  .take {
+    margin: 24px 0 8px;
+    padding: 4px 0 4px 18px;
+    border-left: 3px solid var(--accent);
+  }
+  .take .prose {
+    font-size: 1.12rem;
+  }
+  .take .prose :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  .extras {
+    display: grid;
+    gap: 14px;
+    margin-top: 40px;
+  }
+  .extra h3 a {
+    text-decoration: none;
+  }
+  .extra p:last-child,
+  .extra a.small {
+    margin-bottom: 0;
+  }
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-weight: 600;
+  }
+  .pager a {
+    text-decoration: none;
+  }
+</style>

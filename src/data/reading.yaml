@@ -1,0 +1,99 @@
+# Newsletters, blogs and podcasts.
+# kind: newsletter | blog | podcast
+
+- id: the-readout
+  name: The Readout
+  kind: newsletter
+  url: https://www.statnews.com/signup/readout/
+  by: STAT
+  why: Free daily email on the science and politics driving biotech. The best single place to start.
+
+- id: endpoints
+  name: Endpoints News
+  kind: newsletter
+  url: https://endpoints.news/
+  by: Endpoints News
+  why: Daily biotech and pharma business news — deals, financings, R&D.
+
+- id: timmerman-report
+  name: Timmerman Report
+  kind: newsletter
+  url: https://timmermanreport.com/
+  by: Luke Timmerman
+  why: Weekly biotech analysis and IPO scorecards.
+
+- id: century-of-bio
+  name: Century of Bio
+  kind: newsletter
+  url: https://centuryofbio.com/
+  by: Elliot Hershberg
+  why: Deep essays on AI in biology and company profiles — the best intro to the AI-bio landscape.
+
+- id: ground-truths
+  name: Ground Truths
+  kind: newsletter
+  url: https://erictopol.substack.com/
+  by: Eric Topol
+  why: Readable summaries of major papers on aging, healthspan, AI in medicine and GLP-1s.
+
+- id: owl-posting
+  name: Owl Posting
+  kind: newsletter
+  url: https://www.owlposting.com/
+  by: Abhishaike Mahajan
+  why: Funny, technical essays and interviews on AI and drug discovery. Posts every month or two.
+
+- id: longevity-technology
+  name: Longevity.Technology
+  kind: newsletter
+  url: https://longevity.technology/
+  why: Free daily longevity briefing covering companies, clinics, investment and trials.
+
+- id: on-the-pen
+  name: On The Pen
+  kind: newsletter
+  url: https://onthepen.substack.com/
+  by: Dave Knapp
+  why: Frequent GLP-1 and obesity-drug news — retatrutide, amylin, pills vs. shots — from a patient's angle.
+
+- id: in-the-pipeline
+  name: In the Pipeline
+  kind: blog
+  url: https://www.science.org/blogs/pipeline
+  by: Derek Lowe
+  why: Near-daily drug discovery commentary from a working chemist. The best way to learn how drugs actually get made.
+
+- id: lifescivc
+  name: LifeSciVC
+  kind: blog
+  url: https://lifescivc.com/
+  by: Bruce Booth
+  why: A venture investor's long essays on how biotech startups are funded and built.
+
+- id: fight-aging
+  name: Fight Aging!
+  kind: blog
+  url: https://www.fightaging.org/
+  by: Reason
+  why: A long-running daily digest of aging and rejuvenation research, with a deep archive.
+
+- id: readout-loud
+  name: The Readout LOUD
+  kind: podcast
+  url: https://www.statnews.com/category/readout-loud/
+  by: STAT
+  why: Weekly biotech news podcast — the easiest way to catch up on the week.
+
+- id: biotech-hangout
+  name: Biotech Hangout
+  kind: podcast
+  url: https://www.biotechhangout.com/
+  by: Brad Loncar, Bruce Booth and others
+  why: Weekly Friday panel of investors and executives on the week's data, deals and FDA actions.
+
+- id: the-long-run
+  name: The Long Run
+  kind: podcast
+  url: https://timmermanreport.com/the-long-run/
+  by: Luke Timmerman
+  why: Long interviews with the founders and scientists behind new medicines.
