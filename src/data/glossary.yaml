@@ -211,3 +211,7 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: antisense-oligonucleotide
+  term: Antisense oligonucleotide
+  definition: A short, lab-made strand of genetic material designed to stick to one specific RNA message — the copy a cell reads to make a protein — and block it. Used to silence disease genes or, as with the hepatitis B drug Hibsago, a virus's own messages.
