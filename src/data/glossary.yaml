@@ -1,6 +1,11 @@
 # One entry per term. `id` becomes the anchor: /learn/glossary/#<id>
 # `learn` (optional) links to a primer by its file name.
 
+- id: adjuvant-therapy
+  term: Adjuvant therapy
+  definition: Treatment given after surgery has removed a tumor, to kill any cancer cells left behind and lower the chance the cancer comes back. Trials of adjuvant drugs usually measure how many patients stay cancer-free, not how many tumors shrink.
+  learn: how-a-medicine-gets-made
+
 - id: agonist
   term: Agonist
   definition: A drug that switches a receptor on, mimicking a natural signal. GLP-1 drugs are agonists of the GLP-1 receptor. The opposite, which blocks a receptor, is an antagonist.
