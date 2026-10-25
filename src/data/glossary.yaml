@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: overall-survival
+  term: Overall survival
+  definition: How long patients in a trial live after starting treatment, counting death from any cause. It's the strongest proof a cancer drug works, because it doesn't depend on how scans are read.
+  learn: how-to-read-a-paper
