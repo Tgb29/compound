@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: progression-free-survival
+  term: Progression-free survival (PFS)
+  definition: How long patients in a trial live without their cancer growing or spreading. It's measured sooner than overall survival, so it's often a trial's main goal, but it doesn't always mean people live longer.
+  learn: how-to-read-a-paper
