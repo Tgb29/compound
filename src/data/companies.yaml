@@ -68,9 +68,9 @@
   kind: public
   focus: ai-discovery
   what: Uses generative AI to choose disease targets and design molecules. Listed in Hong Kong since Dec 2025.
-  latest: "Sep 2026: first patient dosed in its Phase 3 trial of rentosertib for lung scarring."
+  latest: "Oct 2026: its AI-designed TEAD blocker ISM6331 shrank tumors in 4 of 22 mesothelioma patients in an early trial (ESMO)."
   url: https://insilico.com
-  source: https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3
+  source: https://www.prnewswire.com/news-releases/insilico-medicine-reports-40-orr-at-130-mg-for-pan-tead-inhibitor-ism6331-designed-using-generative-ai-in-heavily-pretreated-mesothelioma-at-esmo-2026-302919241.html
 
 - id: generate
   name: Generate Biomedicines
