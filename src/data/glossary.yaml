@@ -177,6 +177,11 @@
   definition: A trial that assigns people to the drug or a comparison group by chance. The strongest way to show a treatment causes an effect.
   learn: how-to-read-a-paper
 
+- id: spac
+  term: SPAC
+  definition: Special purpose acquisition company — a shell company that lists on the stock market with cash but no business, then merges with a private company to take it public without a traditional IPO.
+  learn: read-biotech-like-an-investor
+
 - id: small-molecule
   term: Small molecule
   definition: A drug made of a small chemical compound, often taken as a pill. Most traditional medicines are small molecules.
