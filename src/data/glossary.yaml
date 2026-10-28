@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: open-label
+  term: Open-label trial
+  definition: A trial where patients and doctors know which treatment each person is getting. Sometimes unavoidable, but it can make results like side-effect reports less reliable than a double-blind trial.
+  learn: how-to-read-a-paper
