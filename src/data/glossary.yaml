@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: compounding
+  term: Compounding
+  definition: When a pharmacy makes its own version of a drug instead of selling a factory-made, FDA-approved product. Meant for patients who need something unavailable, like a different dose, but compounded drugs skip FDA review for safety and effectiveness.
+  learn: how-a-medicine-gets-made
