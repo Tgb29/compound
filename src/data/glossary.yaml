@@ -211,3 +211,7 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: amyloid
+  term: Amyloid
+  definition: A sticky protein fragment that clumps together in the brains of people with Alzheimer's. Many Alzheimer's drugs are antibodies built to clear it. Two are on the market, but the benefit is modest, others have failed, and a common side effect is brain swelling or bleeding seen on scans.
