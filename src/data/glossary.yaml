@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: intermediate-endpoint
+  term: Intermediate endpoint
+  definition: A result that shows a drug is helping but isn't the final goal, such as fewer surgeries rather than a lasting recovery. The FDA can grant accelerated approval on one if it's reasonably likely to predict real benefit, then requires a follow-up study to confirm it.
+  learn: how-a-medicine-gets-made
