@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: rems
+  term: REMS (Risk Evaluation and Mitigation Strategy)
+  definition: Extra safety rules the FDA can attach to a drug with serious risks, such as prescriber training, required blood tests or limits on who can dispense it. A REMS keeps a risky drug available, but adds work for doctors and patients.
+  learn: how-a-medicine-gets-made
