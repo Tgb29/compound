@@ -19,6 +19,10 @@
   term: Antibody-drug conjugate (ADC)
   definition: An antibody with a toxic drug attached. The antibody finds cancer cells and delivers the poison directly to them, sparing more healthy tissue. One of the hottest areas for deals.
 
+- id: bispecific-antibody
+  term: Bispecific antibody
+  definition: A lab-made antibody built to grab two different targets instead of one, so a single drug can do two jobs. Ivonescimab, for example, blocks both PD-1, a brake on the immune system, and VEGF, a signal tumors use to grow new blood vessels.
+
 - id: binary-event
   term: Binary event
   definition: A scheduled event, like a trial readout, where the result is close to pass-or-fail and can send a stock sharply up or down.
