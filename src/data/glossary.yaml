@@ -157,6 +157,11 @@
   term: Peptide
   definition: A short chain of amino acids — a small protein. Many hormones, and the drugs that mimic them like semaglutide, are peptides.
 
+- id: pivotal-trial
+  term: Pivotal trial
+  definition: The large, carefully controlled study, usually Phase 3, that a company plans to use as the main evidence for approval. Promising earlier trials don't guarantee a pivotal one will succeed.
+  learn: how-a-medicine-gets-made
+
 - id: placebo
   term: Placebo
   definition: A dummy treatment with no active drug, given to a comparison group so a trial can tell the drug's real effect from expectation and chance.
