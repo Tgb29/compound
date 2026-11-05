@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: viral-vector
+  term: Viral vector
+  definition: A virus with its disease-causing genes removed, used as a delivery truck to carry a working gene into a patient's cells. Most gene therapies use one, often an AAV (adeno-associated virus). Doctors watch for years after treatment because the delivered DNA can occasionally insert itself into the patient's own genes.
+  learn: how-a-medicine-gets-made
