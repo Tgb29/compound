@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: real-world-evidence
+  term: Real-world evidence
+  definition: Evidence from everyday medical care, such as insurance claims and health records, instead of a trial that randomly assigns treatments. It covers far more people, but because doctors and patients chose the treatment, the groups can differ in ways the data don't show.
+  learn: how-to-read-a-paper

@@ -8,9 +8,9 @@
   kind: public
   focus: big-pharma
   what: Maker of Zepbound/Mounjaro (tirzepatide) and the Foundayo pill. Leads the obesity-drug market, with retatrutide next.
-  latest: "Oct 2026: the EU medicines committee backed Foundayo for obesity and diabetes. Q3 results due Oct 29."
+  latest: "Nov 2026: Zepbound and Foundayo became available on the Hims & Hers telehealth app at Lilly's cash prices; Foundayo's Q3 sales of $184 million missed forecasts."
   url: https://www.lilly.com
-  source: https://www.pharmexec.com/view/ema-panel-backs-lilly-foundayo-obesity-type-2-diabetes-europe
+  source: https://www.biopharmadive.com/news/lilly-hims-alnylam-boehringer-ultragenyx-sevasemten-ani-egetis/873843/
 
 - id: novo-nordisk
   name: Novo Nordisk
@@ -18,9 +18,9 @@
   kind: public
   focus: big-pharma
   what: Maker of Ozempic and Wegovy (semaglutide) and the first GLP-1 weight-loss pill. CagriSema and amycretin are next.
-  latest: "Oct 2026: new CagriSema data showed about 25% average weight loss in women; an FDA decision is expected in Q4."
+  latest: "Nov 2026: the Wegovy pill beat Q3 sales forecasts and Novo raised its outlook; full results confirmed its anti-inflammation heart drug ziltivekimab failed."
   url: https://www.novonordisk.com
-  source: https://www.prnewswire.com/news-releases/novos-cagrisema-was-associated-with-25-weight-loss-on-average-for-women-in-a-post-hoc-analysis-of-redefine-1-presented-at-the-menopause-society-annual-meeting-302914051.html
+  source: https://www.biopharmadive.com/news/novo-wegovy-pill-sales-3q-2026-earnings-cfo/873693/
 
 - id: amgen
   name: Amgen
