@@ -32,10 +32,10 @@
   area: obesity
   what: Daily tablet of semaglutide, the same GLP-1 drug as in Wegovy shots.
   stage: Approved (US, EU)
-  latest: "Jul 2026: the European Commission approved it. After its US launch in Jan 2026 it passed 3 million prescriptions by June."
-  next: Launches in more countries in the second half of 2026.
-  asof: 2026-07-15
-  source: https://www.biospace.com/press-releases/novo-nordisk-receives-european-commission-approval-of-wegovy-pill-as-first-oral-glp-1-for-weight-management-in-the-eu-single-ready-to-use-pen-for-higher-dose-7-2-mg-also-approved
+  latest: "Nov 2026: Q3 sales of about $811 million beat analysts' forecasts, outselling Lilly's Foundayo pill ($184 million)."
+  next: Novo expects it to be sold in more than 20 countries by 2027.
+  asof: 2026-11-04
+  source: https://www.biopharmadive.com/news/novo-wegovy-pill-sales-3q-2026-earnings-cfo/873693/
 
 - id: cagrisema
   name: CagriSema
