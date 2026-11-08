@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: lipoprotein-a
+  term: Lipoprotein(a)
+  definition: A cholesterol-carrying particle in the blood, often written Lp(a), whose level is set mostly by your genes rather than diet or exercise. High levels are linked to heart attacks and strokes, but no drug has yet shown that lowering it prevents them.
+  learn: how-to-read-a-paper
