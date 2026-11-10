@@ -19,6 +19,11 @@
   term: Antibody-drug conjugate (ADC)
   definition: An antibody with a toxic drug attached. The antibody finds cancer cells and delivers the poison directly to them, sparing more healthy tissue. One of the hottest areas for deals.
 
+- id: base-editing
+  term: Base editing
+  definition: A precise form of gene editing that swaps a single DNA "letter" for another without cutting through both strands of DNA, as older CRISPR tools do. Beam Therapeutics' sickle cell treatment could become the first base-editing medicine filed with the FDA.
+  learn: how-a-medicine-gets-made
+
 - id: binary-event
   term: Binary event
   definition: A scheduled event, like a trial readout, where the result is close to pass-or-fail and can send a stock sharply up or down.
