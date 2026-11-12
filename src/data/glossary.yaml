@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: clinical-obesity
+  term: Clinical obesity
+  definition: Excess body fat that is already harming how organs or the body work, such as causing breathlessness, joint damage or heart strain. A 2025 Lancet Commission proposed it as a disease in its own right, separate from "preclinical obesity" — excess fat with no harm yet — and said BMI alone shouldn't decide either.
+  learn: glp1s-and-whats-next
