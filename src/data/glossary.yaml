@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: rd-funding-deal
+  term: R&D funding deal
+  definition: An outside investor, often a private-equity or royalty fund, pays part of the cost of developing a drug. If the drug is approved and sells well, the drugmaker pays the investor back with milestones or a cut of sales; if it fails, the investor usually loses its money. It lets companies share risk without selling shares or borrowing.
+  learn: read-biotech-like-an-investor
