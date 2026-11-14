@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: controlled-substance-schedule
+  term: Controlled substance schedule
+  definition: The US Drug Enforcement Administration sorts drugs that can be misused into five schedules. Schedule I drugs have no accepted medical use; Schedules II to V are allowed as medicines, with lower numbers meaning more abuse risk and stricter rules on prescribing. A new drug that affects the brain often can't be sold until the DEA assigns its schedule, even after FDA approval.
+  learn: how-a-medicine-gets-made
