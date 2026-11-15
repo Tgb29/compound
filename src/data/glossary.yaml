@@ -162,6 +162,11 @@
   definition: A dummy treatment with no active drug, given to a comparison group so a trial can tell the drug's real effect from expectation and chance.
   learn: how-to-read-a-paper
 
+- id: prior-authorization
+  term: Prior authorization
+  definition: A rule that makes a doctor get an insurer's approval before it will pay for a drug or treatment. Insurers use it to control costs, and it often decides whether patients can actually get pricey new drugs like GLP-1s.
+  learn: glp1s-and-whats-next
+
 - id: preprint
   term: Preprint
   definition: A study posted publicly (on bioRxiv or medRxiv) before peer review. Fast and useful, but unchecked.
