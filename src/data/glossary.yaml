@@ -68,6 +68,11 @@
   definition: The three stages of testing in people. Phase 1 checks safety and dose in a small group; Phase 2 checks whether it seems to work; Phase 3 confirms it works in hundreds to thousands of patients.
   learn: how-a-medicine-gets-made
 
+- id: companion-diagnostic
+  term: Companion diagnostic
+  definition: A test approved alongside a drug to pick out the patients it's meant for, usually by finding a specific gene change or protein. Many targeted cancer drugs can only be prescribed after a positive result.
+  learn: how-a-medicine-gets-made
+
 - id: crl
   term: Complete Response Letter (CRL)
   definition: The FDA's rejection letter. It lists what the company must fix — more data, a new trial, manufacturing problems — before the drug can be approved.
