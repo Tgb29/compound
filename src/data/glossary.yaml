@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: hazard-ratio
+  term: Hazard ratio
+  definition: Compares how often a bad outcome, like death, happens in a treated group versus a comparison group over a trial. 0.59 means about 41% lower risk at any given time; 1.0 means no difference. The headline number in most survival studies.
+  learn: how-to-read-a-paper
