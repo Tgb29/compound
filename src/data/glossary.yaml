@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: subgroup-analysis
+  term: Subgroup analysis
+  definition: Looking at results for only part of a trial's patients, such as those over 75. If a drug misses its main goal but works in a subgroup, that's a clue to test in a new trial, not proof it works — slice the data enough ways and something will look good by chance.
+  learn: how-to-read-a-paper
