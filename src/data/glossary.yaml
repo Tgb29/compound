@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: clinical-trial-inspection
+  term: Clinical trial inspection
+  definition: FDA inspectors visit a drug company and its trial sites to check that a study was run as planned — patients protected, rules not changed midway, records matching the reported results. If they find serious problems, the FDA can refuse to rely on the data.
+  learn: how-a-medicine-gets-made
