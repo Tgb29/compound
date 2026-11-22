@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: response-rate
+  term: Response rate
+  definition: The share of patients in a cancer study whose tumors shrank by a set amount (usually at least 30%) on scans. It's an early sign a drug works, but it doesn't prove patients live longer, and rates from different trials can't be fairly compared because the patients differ.
+  learn: how-to-read-a-paper
