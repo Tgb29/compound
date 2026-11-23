@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: surrogate-endpoint
+  term: Surrogate endpoint
+  definition: A lab measurement used in place of the outcome patients care about, because it's quicker to measure — like antibody levels instead of counting who gets sick. Only useful if it reliably predicts the real outcome; the FDA can accept one for an accelerated approval.
+  learn: how-a-medicine-gets-made
