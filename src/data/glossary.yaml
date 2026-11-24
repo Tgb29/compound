@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: takeover-premium
+  term: Takeover premium
+  definition: How much more a buyer offers per share than the stock was worth before word of the deal got out. After a deal is announced, the stock usually trades just below the offer price until the deal closes, because there's still a small chance it falls apart.
+  learn: read-biotech-like-an-investor
