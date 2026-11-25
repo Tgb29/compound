@@ -172,6 +172,11 @@
   definition: The main result a trial is designed to measure, chosen before it starts. "Met the primary endpoint" means the trial succeeded on its main goal.
   learn: how-a-medicine-gets-made
 
+- id: progression-free-survival
+  term: Progression-free survival (PFS)
+  definition: How long patients in a cancer trial live without their cancer growing or spreading. It's measured sooner than overall survival, so it's often what earns an approval, but it doesn't by itself prove people live longer.
+  learn: how-a-medicine-gets-made
+
 - id: rct
   term: Randomized controlled trial (RCT)
   definition: A trial that assigns people to the drug or a comparison group by chance. The strongest way to show a treatment causes an effect.
