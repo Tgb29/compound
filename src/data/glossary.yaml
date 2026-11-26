@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: placebo-response
+  term: Placebo response
+  definition: How much patients on the dummy treatment in a trial improve anyway, from expectation, extra care or a disease that naturally comes and goes. When it runs high, a real drug can struggle to beat it and the trial can fail.
+  learn: how-to-read-a-paper
