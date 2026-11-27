@@ -211,3 +211,8 @@
   term: Post hoc analysis
   definition: Slicing a trial's data in ways that weren't planned before it started, such as looking only at women. Useful for ideas, but it can't prove anything on its own.
   learn: how-to-read-a-paper
+
+- id: biosimilar
+  term: Biosimilar
+  definition: A near-copy of a biologic drug (one made in living cells, like an antibody), sold after the original's patents expire. It can't be identical the way a generic pill is, so it must show it works the same way. It usually costs less.
+  learn: read-biotech-like-an-investor
